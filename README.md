@@ -9,13 +9,13 @@ We already have tools such as Slack Watchman which dorks for sensitive informati
 
 Thanks to Project OctoPII ( https://github.com/redhuntlabs/Octopii ) which has the capability to search image files for PII information using machine learning. Currently Octopii does not have direct integration with slack as source of data, hence this script.
 
-##who can use this tool?
+## who can use this tool?
 
 bug bounty hunters / red teamers - you found a leaked slack token and extracted lot of data from slack org space using slack watchman ? you might still be loosing insights on image files which might contain senstivie and critical PII information ( Passport, national ID's , bank documents uploaded internally on any public channels etc ) 
 
 Internal product security team - you have already setup slackwatchman internally and currently monitoring slack workspace for leaked PII data on regular basis. you can setup this integration script to run as cron / lambda function everyday ( timeframe set to 'd') to gain insights on image files as well.
 
-##How to use ?
+## How to use ?
 This script is quite similar to slack-watchman when it comes to config. 
 
 1. Set env variable named 'slack_token' with value pointing to a valid token which can read all  messages inside public channels.
@@ -39,4 +39,4 @@ Persist_PiiFiles = True # persist result images containing PII info? ( useful fo
   python3 pii_slack_monitor.py
   ```
 
-##Results
+## Results
