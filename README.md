@@ -80,3 +80,6 @@ each of the detected result set would follow the following format,
 and if Persist PII option is set in config, you would also see all the image files which contains the sensitive Info.
 
 Enhancement plans : add PDF file format capability.
+
+### All thanks and our sincere gratitude to the Octopii Authors , for solving an important usecase for security engineers like me :D ,
+   [ https://github.com/redhuntlabs/Octopii ]
