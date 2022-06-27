@@ -15,7 +15,8 @@ bug bounty hunters / red teamers - you found a leaked slack token and extracted 
 
 Internal product security team - you have already setup slackwatchman internally and currently monitoring slack workspace for leaked PII data on regular basis. you can setup this integration script to run as cron / lambda function everyday ( timeframe set to 'd') to gain insights on image files as well.this script complements slackwatchman.
 
-## How to use ?
+## How to use ? 
+(Runs on Python 3)
 This script is quite similar to slack-watchman when it comes to config. 
 
 1. Set env variable named 'slack_token' with value pointing to a valid token which can read all  messages inside public channels.
@@ -31,7 +32,7 @@ Persist_PiiFiles = True # persist result images containing PII info? ( useful fo
 ```
 3. copy the config and the python script to downloaded octopii project folder ( https://github.com/redhuntlabs/Octopii ) (do install the octopii necessary dependencies / requirements ).
 4. install python package requirements for the integration script.
-  > slack_sdk
+  > slack_sdk,
   > configparser
   
 5. thats it, run the script 
