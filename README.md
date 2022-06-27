@@ -41,3 +41,42 @@ Persist_PiiFiles = True # persist result images containing PII info? ( useful fo
   ```
 
 ## Results
+Output would follow the follwing format. 
+```bash
+result-date-time.zip
+```
+Extracted results file would have a json file "pii_results.json" which contains all the detected files with PII information , along with the metadata such as user who uploaded the file, timestamp,channel where it was uploaded and a veification attribute ,  perma_link_verify , which can be used to point out exact message / thread which contains the image .
+
+each of the detected result set would follow the following format, 
+
+```bash
+{
+        "file_name": "XXXXXXXXX.png",
+        "asset_label": "Passport",
+        "confidence": 97,
+        "download_link": "https://files.slack.com/files-pri/XXXXXXX-XXXXXXXX/download/image.png",
+        "user_created_id": "XXXXXXXXXXX",
+        "user_name": "user.who.uploaded",
+        "timestamp": 165600003,
+        "orig_image_name": "image.png",
+        "perma_link_verify": "https://<org>.slack.com/files/XXXX00000/0000XXAXXXXX/image.png",
+        "shares": {
+            "public": {
+                "XXXXXXXXX": [
+                    {
+                        "reply_users": [],
+                        "reply_users_count": 0,
+                        "reply_count": 0,
+                        "ts": "165600003.000000",
+                        "channel_name": "temp-pii",
+                        "team_id": "XXXXXXX",
+                        "share_user_id": "XXXXXXXXX"
+                    }
+                ]
+            }
+        }
+    }
+```
+and if Persist PII option is set in config, you would also see all the image files which contains the sensitive Info.
+
+Enhancement plans : add PDF file format capability.
