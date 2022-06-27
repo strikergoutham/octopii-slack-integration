@@ -11,7 +11,7 @@ Thanks to Project OctoPII ( https://github.com/redhuntlabs/Octopii ) which has t
 
 ## who can use this tool?
 
-bug bounty hunters / red teamers - you found a leaked slack token and extracted lot of data from slack org space using slack watchman ? you might still be loosing insights on image files which might contain senstivie and critical PII information ( Passport, national ID's , bank documents uploaded internally on any public channels etc ) 
+bug bounty hunters / red teamers - you found a leaked slack token and extracted lot of data from slack org space using slack watchman ? you might still be missing insights on image files which might contain senstivie and critical PII information ( Passport, national ID's , bank documents uploaded internally on any public channels etc ) 
 
 Internal product security team - you have already setup slackwatchman internally and currently monitoring slack workspace for leaked PII data on regular basis. you can setup this integration script to run as cron / lambda function everyday ( timeframe set to 'd') to gain insights on image files as well.this script complements slackwatchman.
 
