@@ -1,5 +1,5 @@
 # Purpose
-Purpose of this script is to integrate Octopii ( https://github.com/redhuntlabs/Octopii ) to audit images shared on slack org space. 
+Purpose of this script is to integrate Octopii ( https://github.com/redhuntlabs/Octopii ) to audit images shared on slack org space for sensitive PII data. 
 
 As internal employees in an organisation shares tons of files on slack as part of their day to day operations for faster collaboration,many a times they forget / might be sharing  sensitive PII which belongs to the clients / customers on public channels which can be indexed and searched by anyone inside organisation. Slack by default creates a public channel which many a times are overlooked by channel creators to make it private.
 
